@@ -77,7 +77,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De website is lastig te bekijken door de brillen heen. Het overzicht verlies je snel en het is lastig om je focus te houden op 1 onderwerp als je eventjes wegkijkt. Dark/light mode is er niet, Steam staat altijd op darkmode. Kleurenblind/contrast is in principe prima te handelen. Het enige nadeel is dat het lichtelijk slecht te lezen is door het lage contrast.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 

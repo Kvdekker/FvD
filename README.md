@@ -59,16 +59,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De screenreader was amper te gebruiken. 9 van de 10 afbeeldingen op de website hadden geen label waardoor je niet kon weten wat de afbeelding was. Zelfs het log van de website zelf had geen label!
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Alle afbeeldingen goede duidelijke labels geven zodat je weet waar je bent en wat de afbeelding is.
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
-
+  Via Tab was het op het begin duidelijk waar jij je bevindt. De website gaf duidelijk aan door middel van een lichte lijn om het item heen waar je was, totdat je doorklikt. Je komt dan terecht bij een lijst die niet in beeld staat. Als je daarna verder klikt en je bij de foto's komt wordt er niks meer aangegeven. Je bent dan volledig afhankelijk van de tekst die links onderin staat. 
+  
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Duidelijk per item aangeven waar je bent. De lijstitems die niet in beeld zijn verstoppen zodat ze niet worden geselecteerd. Alle items kunnen worden gesorteerd per categorie zodat je minder lang alle lijsten af hoeft te gaan van onderdelen wat jou niet interesseert.
 
   #### Motoriek (shocks, elastiekjes)
   Hier korte omschrijving (met indien nodig afbeeldingen)

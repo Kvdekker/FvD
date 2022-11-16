@@ -43,7 +43,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/scherm1.jpg" width="375px" alt="Home/store page">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Metal Gear Solid V Store Pagina
+  Metal Gear Solid V Store Pagina   
   <img src="readme-images/scherm2.jpg" width="375px" alt="Productpagina Metal Gear Solid V">
  
 </details>

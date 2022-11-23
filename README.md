@@ -91,15 +91,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/scherm1.1.jpg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/scherm1.2.jpg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/scherm3.jpg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/scherm4.jpg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/scherm5.jpg" width="375px" alt="breakdown van de hele pagina">
-  <img src="readme-images/scherm6.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm1.1.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm1.2.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm3.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm4.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm5.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm6.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/scherm7.jpg" width="375px" alt="breakdown van het dynamische deel">
+  <img src="readme-images/scherm7 - 1.png" width="375px" alt="breakdown van het dynamische deel">
 
 </details>
 

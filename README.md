@@ -71,16 +71,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Duidelijk per item aangeven waar je bent. De lijstitems die niet in beeld zijn verstoppen zodat ze niet worden geselecteerd. Alle items kunnen worden gesorteerd per categorie zodat je minder lang alle lijsten af hoeft te gaan van onderdelen wat jou niet interesseert.
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Motoriek is het prima te doen met de website. Echter als je problemen hebt zoals parkinson is er een mogelijkheid dat je snel klikt op het verkeerde onderdeel.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Hoe kan dit mogelijk opgelost worden?
+  Door middel van wat meer ruimte tussen de onderdelen.
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  De website is lastig te bekijken door de brillen heen. Het overzicht verlies je snel en het is lastig om je focus te houden op 1 onderwerp als je eventjes wegkijkt. Dark/light mode is er niet, Steam staat altijd op darkmode. Kleurenblind/contrast is in principe prima te handelen. Het enige nadeel is dat het lichtelijk slecht te lezen is door het lage contrast.
+  De website is lastig te bekijken door de brillen heen. Het overzicht verlies je snel en het is lastig om je focus te houden op 1 onderwerp als je eventjes wegkijkt.   Dark/light mode is er niet, Steam staat altijd op darkmode. Kleurenblind/contrast is in principe prima te handelen. Het enige nadeel is dat het lichtelijk slecht te   lezen is door het lage contrast.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Hoe kan dit opgelost worden?
+  Door een light mode toe te voegen. Hierdoor is het makkelijker om naar de kleuren van de website te kunnen kijken.
 </details>
 
 
@@ -91,13 +91,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm1.1.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm1.2.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm3.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm4.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm5.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/scherm6.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/scherm7.jpg" width="375px" alt="breakdown van het dynamische deel">
 
 </details>
 
@@ -111,17 +113,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het maken van de website zelf ging wel goed. Ik denk dat ik vrij goed op weg ben.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Koen                                           | Soraya                       | student 3    | student 4        |
+  | ---                                            | ---                          | ---          | ---              |
+  | Vraag over categorieën                         | Foto kan niet in het midden. | en ik dit    | en dan ik dat    |
+  | en vraag over opdracht: wel betermaken of niet?| Ordered list                 | nog een punt | dit wil ik zeker |
+  | ...                                            | ...                          | ...          | ...              |
 
 
   ### Verslag van meeting

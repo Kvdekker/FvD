@@ -12,9 +12,16 @@
     --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
     --korting: linear-gradient(45deg, rgb(26, 247, 44) 0%, rgb(0, 141, 19) 100%);
     --kortingfont: rgb(0, 65, 0);
+
+    --categorieblauw: linear-gradient(rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.781));
+    --categorierood: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.781));
+    --categoriegroen: linear-gradient(rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.781));
+    --categorielila: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.781));
+    --categoriepaars: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.781));
+    --categoriegeel: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781));
 }
 
-main {
+body {
     color: var(--lettercolor);
     font-family: arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -25,32 +32,60 @@ header {
     top: 0;
     z-index: 100;
     width: 100%;
-    margin-bottom: 1em;
 }
 
-header img:first-child {
-    margin: 0.7em;
+
+
+
+/* ************************* */
+/* NAV */
+/* ************************* */
+nav section img {
+    margin: 1em;
+    width: 2em;
+    display: block;
+}
+
+
+nav button img {
+    margin: 1em;
     width: 2em;
 }
-/* ********** */
-/* NAV */
-/* ********** */
+
 nav ul {
     background: var(--gamecolor);
 }
 
 nav li {
-    margin: 1em;
+    padding: 0.8em 0;
+    margin: 0 0 0 15px;
 }
 
-nav a {
-    padding-bottom: 11em;
+nav li:nth-of-type(6) {
+    padding: 0;
 }
 
-body {
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    height: 1vh;
+    border-radius: 100px;
+    padding: 1em;
+}
+
+button {
+    background: none;
+}
+
+
+
+main {
     background-color: var(--backgroundcolor);
 }
-
 
 
 h1 {
@@ -77,14 +112,18 @@ article>h2 {
     padding: 30px 0 0.5em 0;
 }
 
-article ul {
-    display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(min(16em, 100%), 1fr));
-  gap:1em;
+article:nth-of-type(2) li {
+    border-radius: 1em;
+}
+
+article:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr));
+    gap: 1em;
 }
 
 article li {
-    background: var(--gamecolor);
+    /* background: var(--gamecolor); */
 }
 
 article a {
@@ -116,271 +155,117 @@ article:nth-of-type(2) h3 {
     left: 0;
     right: 0;
     bottom: 0;
+
+    color: white;
+    text-align: center;
+
+    margin: 0;
+    padding: 100px .5em 1.5em;
 }
 
 /* ************ */
 /* AVONTUUR */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(1) h3 {
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
-    color: white;
+    background: var(--categorieblauw);
 }
 
 /* ************ */
 /* VIRTUAL REALITY */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(2) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
-    color: white;
+    background: var(--categorierood);
 }
 
 /* ************ */
 /* CO-OP */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(3) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
-    color: white;
+    background: var(--categoriegroen);
 }
 
 /* ************ */
 /* ROLLENSPEL */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(4) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.534) );
-    color: white;
+    background: var(--categorielila);
 }
 
 /* ************ */
 /* OPEN WERELD */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(5) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.534) );
-    color: white;
+    background: var(--categoriepaars);
 }
 
 /* ************ */
 /* STRATEGIE */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(6) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781) );
-    color: white;
+    background: var(--categoriegeel);
 }
 
 /* ************ */
 /* HORROR */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(7) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
-    color: white;
+    background: var(--categorierood);
 }
 
 /* ************ */
 /* VERHAALLIJN */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(8) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
-    color: white;
+    background: var(--categorieblauw);
 }
 
 /* ************ */
 /* PUZZEL */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(9) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
-    color: white;
+    background: var(--categoriegroen);
 }
 
 /* ************ */
 /* GRATIS TE SPELEN */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(10) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.534) );
-    color: white;
+    background: var(--categorielila);
 }
 
 /* ************ */
 /* SIMULATIE */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(11) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
-    color: white;
+    background: var(--categorierood);
 }
 
 /* ************ */
 /* SPORT */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(12) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
-    color: white;
+    background: var(--categorieblauw);
 }
 
 /* ************ */
 /* RACEN */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(13) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781) );
-    color: white;
+    background: var(--categoriegeel);
 }
 
 /* ************ */
 /* SURVIVAL */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(14) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
-    color: white;
+    background: var(--categorielila);
 }
 
 /* ************ */
 /* ACTIE */
 /* ************ */
 article:nth-of-type(2) li:nth-of-type(15) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 8em .5em 1.5em;
-
-    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.534) );
-    color: white;
+    background: var(--categoriepaars);
 }
 
 

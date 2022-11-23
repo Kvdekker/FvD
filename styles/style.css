@@ -1,34 +1,403 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+* {
+    margin: 0;
+    padding: 0;
 }
 
-button, summary {
-	cursor: pointer;
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+    --headercolor: #171a21;
+    --backgroundcolor: #1B2838;
+    --kortingdoorstreept: #112375;
+    --kortingfontoud: #3b5677;
+    --lettercolor: white;
+    --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
+    --korting: linear-gradient(45deg, rgb(26, 247, 44) 0%, rgb(0, 141, 19) 100%);
+    --kortingfont: rgb(0, 65, 0);
+}
+
+main {
+    color: var(--lettercolor);
+    font-family: arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: var(--headercolor);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+header img:first-child {
+    margin: 0.7em;
+    width: 2em;
+}
+/* ********** */
+/* NAV */
+/* ********** */
+nav ul {
+    background: var(--gamecolor);
+}
+
+nav li {
+    margin: 1em;
+}
+
+nav a {
+    padding-bottom: 11em;
+}
+
+body {
+    background-color: var(--backgroundcolor);
 }
 
 
 
+h1 {
+    margin: 6em 15px 15px 15px;
+    width: auto;
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 2em;
+}
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
 
-/* jouw code */
+ul {
+    list-style-type: none;
+}
 
+article {
+    margin: 15px;
+}
+
+article>h2 {
+    padding: 30px 0 0.5em 0;
+}
+
+article ul {
+    display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(min(16em, 100%), 1fr));
+  gap:1em;
+}
+
+article li {
+    background: var(--gamecolor);
+}
+
+article a {
+    display: flex;
+    flex-direction: column;
+}
+
+article li h3 {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+article li p {
+    padding: 0.2em 1em 1em 1em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(2) li {
+    position: relative;
+}
+
+article:nth-of-type(2) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* ************ */
+/* AVONTUUR */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(1) h3 {
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* VIRTUAL REALITY */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(2) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* CO-OP */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(3) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* ROLLENSPEL */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(4) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* OPEN WERELD */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(5) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* STRATEGIE */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(6) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781) );
+    color: white;
+}
+
+/* ************ */
+/* HORROR */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(7) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* VERHAALLIJN */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(8) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* PUZZEL */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(9) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* GRATIS TE SPELEN */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(10) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* SIMULATIE */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(11) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* SPORT */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(12) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* RACEN */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(13) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781) );
+    color: white;
+}
+
+/* ************ */
+/* SURVIVAL */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(14) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.534) );
+    color: white;
+}
+
+/* ************ */
+/* ACTIE */
+/* ************ */
+article:nth-of-type(2) li:nth-of-type(15) h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 8em .5em 1.5em;
+
+    background-image:linear-gradient( rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.534) );
+    color: white;
+}
+
+
+
+article:nth-of-type(4) p:nth-of-type(2) {
+    width: fit-content;
+    text-align: center;
+    background: var(--korting);
+    color: var(--kortingfont);
+    font-weight: bolder;
+}
+
+article:nth-of-type(4) ul li p:nth-of-type(3) span {
+    width: fit-content;
+    text-align: center;
+    text-decoration: line-through;
+    padding: 1em;
+    background: var(--kortingdoorstreept);
+    color: var(--kortingfontoud);
+}

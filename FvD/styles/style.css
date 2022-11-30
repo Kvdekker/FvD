@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundcolor: rgb(0, 12, 93);
+    --navcolor: rgb(5, 21, 146);
+    --navcolorrand: #040021;
+    --selectcolor: rgb(12, 32, 189);
+    --form: rgb(12, 32, 189);
+    --kortingdoorstreept: #112375;
+    --kortingfontoud: #d95fe4;
+    --kortingdik: black;
+    --lettercolor: white;
+    --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
+    --kortingachtergrond: #000625;
+    --korting:#A1CD44;
+    --kortingfont: rgb(0, 65, 0);
+    --schadowcolor: #000931 0px 0px 10px;
+    --menubarknopuit: rgb(65, 87, 255);
+}
+
+body {
+    color: var(--lettercolor);
+    font-family: arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: var(--backgroundcolor);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+
+/* ************************* */
+/* NAV */
+/* ************************* */
+
+/* Steam logo */
+nav section img {
+    margin: 1em;
+    width: 2em;
+    display: block;
+}
+
+/* Winkelwagen */
+nav section button:nth-of-type(2) {
+    filter: invert(1);
+}
+
+nav button {
+    background: none;
+    border: none;
+    transition: 1s;
+}
+
+/* Navbar zelf */
+nav section {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--backgroundcolor);
+    border-bottom: solid 1px var(--navcolorrand);
+}
+
+/* Uitschuifmenu winkel */
+nav ul {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+
+    transition: 0.4s ease-in-out;
+    transform: translateY(-200%);
+
+    background-color: var(--navcolor);
+}
+
+.openMaken {
+    transition: 0.3s ease-in-out;
+    transform: translateY(0);
+    display: block;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+nav li:nth-child(-n+5) {
+    padding: 0.6em 0;
+    margin: 0 0 0 15px;
+}
+
+nav li:nth-of-type(6) {
+    padding: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--form);
+
+    border-bottom: 1px solid var(--navcolorrand);
+
+}
+
+nav img {
+    width: 2em;
+    margin: 1em 1em 1em 0;
+}
+
+.buttonlicht {
+    transition: 0.5s;
+    filter: drop-shadow(0 0 5px  rgb(255, 255, 255)); 
+}
+
+form img {
+    padding: 0 0 0 1em;
+}
+
+input {
+    background: none;
+    border: none;
+
+    font-size: 1em;
+    width: 100%;
+
+    margin-right: 15px;
+    padding: 1em 1em 1em 1em;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: bold;
+
+}
+
+input:focus {
+    background-color: var(--selectcolor);
+    color: white;
+
+    border: none;
+    outline: none;
+}
+
+/* ************************* */
+/* MAIN*/
+/* ************************* */
+
+main {
+    background-color: var(--backgroundcolor);
+}
+
+article:nth-of-type(n+2){
+    margin: 15px;
+}
+
+article:nth-of-type(1) img{
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 39px 0 0 0;
+}
+
+
+main>h1 span {
+    font-weight: 100;
+}
+
+h1 {
+    margin: 0px 15px 0px 15px;
+    width: auto;
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lettercolor);
+}
+
+article>h2 {
+    padding: 15px 0 0.5em 0;
+}
+
+/* ************************* */
+/* ARTICLES*/
+/* ************************* */
+
+article a {
+    display: flex;
+    flex-direction: column;
+}
+
+article li h3 {
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+
+
+/* ************************* */
+/* CATEGORIEEN*/
+/* ************************* */
+
+article:nth-of-type(2) li {
+    background: var(--selectcolor);
+
+    border-radius: 0.5em;
+}
+
+article:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+
+article:nth-of-type(2) li {
+    aspect-ratio: 1/1;
+    margin: 0.2em;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--schadowcolor);
+}
+
+article:nth-of-type(2) a {
+    justify-content: center;
+}
+
+article:nth-of-type(2) img {
+    width: 3em;
+    align-self: center;
+    filter: invert(1);
+}
+
+article:nth-of-type(2) h3 {
+    text-align: center;
+    padding-top: 0.4em;
+}
+
+article:nth-of-type(2) ul.minder, article:nth-of-type(2) button.minder {
+    display: none;
+}
+
+article:nth-of-type(2) button {
+    font-size: 1.2em;
+    font-weight: lighter;
+
+    border: solid 3px;
+    background: none;
+
+    width: 200px;
+    height: 50px;
+
+    
+    color:var(--lettercolor);
+}
+
+article:nth-of-type(2) button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+/* ************************* */
+/* UITGELICHT*/
+/* ************************* */
+article:nth-of-type(3) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1em;
+}
+
+article:nth-of-type(3) li {
+    background: var( --kortingachtergrond);
+    box-shadow: var(--schadowcolor);
+}
+
+article:nth-of-type(3) li p {
+    margin: 5px 0 10px 20px;
+    font-weight: bolder;
+}
+
+/* ************************* */
+/* KORTING*/
+/* ************************* */
+/* Tekst binnen aanbiedingen */
+article:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+    padding: 0 15px;
+    background-color: var(--selectcolor);
+}
+
+article:nth-of-type(5) li {
+    display: grid;
+    justify-content: center;
+
+    box-shadow: var(--schadowcolor);
+    background: var(--kortingachtergrond);
+    padding-bottom: 10px;
+
+    grid-template-rows: 1fr max-content;
+}
+
+article:nth-of-type(5) ul li p:nth-of-type(1) {
+    font-weight: bold;
+    padding: 0px 0 0 15px;
+    text-decoration: line-through;
+    color: var(--kortingfontoud);
+}
+
+article:nth-of-type(5) ul p:nth-of-type(2) {
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 5px 0 5px 15px;
+    background: none;
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(5) ul li p:nth-of-type(3) span {
+    color: var(--korting);
+
+    font-weight: 800;
+    padding: 10px 10px 10px 10px;
+}
+
+/* Afbeelding en grid */
+article:nth-of-type(5) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+article:nth-of-type(5) a {
+    overflow: hidden;
+}
+
+article:nth-of-type(5) img {
+    overflow: hidden;    
+
+    height: 100%;
+    width: 100%;
+
+    display: block;
+}
+
+/* Meer button */
+article:nth-of-type(5) ul.minder2, article:nth-of-type(5) button.minder2 {
+    display: none;
+}
+
+article:nth-of-type(5) button {
+    font-size: 1.2em;
+    font-weight: lighter;
+
+    border: solid 3px;
+    background: none;
+
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 50px;
+
+    
+    color:var(--lettercolor);
+    transition: 1s;
+    align-self: center;
+}
+
+article:nth-of-type(5) button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/******* steamdeck/valve afbeelding *******/
+
+article:nth-of-type(6) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article:nth-of-type(6) img{
+    align-self: center;
+    margin: 15px;
+}
+
+/* ************************* */
+/* Sidescrolling*/
+/* ************************* */
+/* Tekst binnen menuknoppen */
+article:nth-of-type(7) {
+    margin: 0 0;
+    padding: 0 15px 15px 15px;
+}
+
+/********* Selectiemenuknoppen *********/
+article:nth-of-type(7) section:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+}
+
+article:nth-of-type(7) section:nth-of-type(1) button {
+    border: none;
+}
+
+article:nth-of-type(7) section:nth-of-type(1) button.knopuit{
+    border: none;
+    background: none;
+    color:var(--menubarknopuit);
+}
+
+.knopaan {
+    background-color: var(--selectcolor);
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(7) button{
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px 20px 20px;
+    font-size: 0.9em;
+}
+
+/* Selecteren ul */
+article:nth-of-type(7) ul.aan { 
+    margin: -15px;
+    background: var(--selectcolor);
+}
+
+article:nth-of-type(7) ul.uit {
+    display: none;
+ }
+
+article:nth-of-type(7) ul.aan{
+    margin: -15px;
+    background: var(--selectcolor);
+}
+
+article:nth-of-type(7) li {
+    margin: 15px;
+    justify-content: center;
+
+    box-shadow: var(--schadowcolor);
+    background: var(--kortingachtergrond);
+    padding-bottom: 10px;
+}
+
+article:nth-of-type(7) ul li p:nth-of-type(1) {
+    font-weight: bold;
+    padding: 0px 0 0 15px;
+    text-decoration: line-through;
+    color: var(--kortingfontoud);
+}
+
+article:nth-of-type(7) ul p:nth-of-type(2) {
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 5px 0 5px 15px;
+    background: none;
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(7) ul li p:nth-of-type(3) span {
+    color: var(--korting);
+
+    font-weight: 800;
+    padding: 10px 10px 10px 10px;
+}
+
+/* Afbeelding */
+article:nth-of-type(7) ul {
+    display: flex;
+    overflow: scroll;
+    gap: 1.3em;
+}
+
+article:nth-of-type(7) a {
+    overflow: hidden;
+}
+
+article:nth-of-type(7) img {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    display: block;
+}
+

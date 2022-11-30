@@ -1,24 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    --headercolor: #171a21;
-    --backgroundcolor: #1B2838;
+    --backgroundcolor: rgb(0, 12, 93);
+    --navcolor: rgb(5, 21, 146);
+    --navcolorrand: #040021;
+    --selectcolor: rgb(12, 32, 189);
+    --form: rgb(12, 32, 189);
     --kortingdoorstreept: #112375;
-    --kortingfontoud: #3b5677;
+    --kortingfontoud: #d95fe4;
+    --kortingdik: black;
     --lettercolor: white;
     --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
-    --korting: linear-gradient(45deg, rgb(26, 247, 44) 0%, rgb(0, 141, 19) 100%);
+    --kortingachtergrond: #000625;
+    --korting:#A1CD44;
     --kortingfont: rgb(0, 65, 0);
-
-    --categorieblauw: linear-gradient(rgba(255, 255, 255, 0), rgba(4, 0, 255, 0.781));
-    --categorierood: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.781));
-    --categoriegroen: linear-gradient(rgba(255, 255, 255, 0), rgba(43, 255, 0, 0.781));
-    --categorielila: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 255, 255, 0.781));
-    --categoriepaars: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 255, 0.781));
-    --categoriegeel: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 187, 0, 0.781));
+    --schadowcolor: #000931 0px 0px 10px;
+    --menubarknopuit: rgb(65, 87, 255);
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 header {
-    background-color: var(--headercolor);
+    background-color: var(--backgroundcolor);
     position: fixed;
     top: 0;
     z-index: 100;
@@ -35,29 +36,62 @@ header {
 }
 
 
-
-
 /* ************************* */
 /* NAV */
 /* ************************* */
+
+/* Steam logo */
 nav section img {
     margin: 1em;
     width: 2em;
     display: block;
 }
 
-
-nav button img {
-    margin: 1em;
-    width: 2em;
+/* Winkelwagen */
+nav section button:nth-of-type(2) {
+    filter: invert(1);
 }
 
+nav button {
+    background: none;
+    border: none;
+    transition: 1s;
+}
+
+/* Navbar zelf */
+nav section {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--backgroundcolor);
+    border-bottom: solid 1px var(--navcolorrand);
+}
+
+/* Uitschuifmenu winkel */
 nav ul {
-    background: var(--gamecolor);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+
+    transition: 0.4s ease-in-out;
+    transform: translateY(-200%);
+
+    background-color: var(--navcolor);
 }
 
-nav li {
-    padding: 0.8em 0;
+.openMaken {
+    transition: 0.3s ease-in-out;
+    transform: translateY(0);
+    display: block;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+nav li:nth-child(-n+5) {
+    padding: 0.6em 0;
     margin: 0 0 0 15px;
 }
 
@@ -68,63 +102,102 @@ nav li:nth-of-type(6) {
 form {
     display: flex;
     align-items: center;
+
+    background-color: var(--form);
+
+    border-bottom: 1px solid var(--navcolorrand);
+
+}
+
+nav img {
+    width: 2em;
+    margin: 1em 1em 1em 0;
+}
+
+.buttonlicht {
+    transition: 0.5s;
+    filter: drop-shadow(0 0 5px  rgb(255, 255, 255)); 
+}
+
+form img {
+    padding: 0 0 0 1em;
 }
 
 input {
-    width: 100%;
-    height: 1vh;
-    border-radius: 100px;
-    padding: 1em;
-}
-
-button {
     background: none;
+    border: none;
+
+    font-size: 1em;
+    width: 100%;
+
+    margin-right: 15px;
+    padding: 1em 1em 1em 1em;
 }
 
+input::placeholder {
+    color: white;
+    font-weight: bold;
 
+}
+
+input:focus {
+    background-color: var(--selectcolor);
+    color: white;
+
+    border: none;
+    outline: none;
+}
+
+/* ************************* */
+/* MAIN*/
+/* ************************* */
 
 main {
     background-color: var(--backgroundcolor);
 }
 
+article:nth-of-type(n+2){
+    margin: 15px;
+}
+
+article:nth-of-type(1) img{
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 39px 0 0 0;
+}
+
+
+main>h1 span {
+    font-weight: 100;
+}
 
 h1 {
-    margin: 6em 15px 15px 15px;
+    margin: 0px 15px 0px 15px;
     width: auto;
     font-size: 1.6em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
-
-
 
 ul {
     list-style-type: none;
 }
 
-article {
-    margin: 15px;
+a {
+    text-decoration: none;
+    color: var(--lettercolor);
 }
 
 article>h2 {
-    padding: 30px 0 0.5em 0;
+    padding: 15px 0 0.5em 0;
 }
 
-article:nth-of-type(2) li {
-    border-radius: 1em;
-}
-
-article:nth-of-type(2) ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr));
-    gap: 1em;
-}
-
-article li {
-    /* background: var(--gamecolor); */
-}
+/* ************************* */
+/* ARTICLES*/
+/* ************************* */
 
 article a {
     display: flex;
@@ -133,156 +206,296 @@ article a {
 
 article li h3 {
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
-article li p {
-    padding: 0.2em 1em 1em 1em;
-    font-weight: bold;
-}
 
-a {
-    text-decoration: none;
-    color: var(--lettercolor);
-}
+
+/* ************************* */
+/* CATEGORIEEN*/
+/* ************************* */
 
 article:nth-of-type(2) li {
-    position: relative;
+    background: var(--selectcolor);
+
+    border-radius: 0.5em;
+}
+
+article:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+
+article:nth-of-type(2) li {
+    aspect-ratio: 1/1;
+    margin: 0.2em;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--schadowcolor);
+}
+
+article:nth-of-type(2) a {
+    justify-content: center;
+}
+
+article:nth-of-type(2) img {
+    width: 3em;
+    align-self: center;
+    filter: invert(1);
 }
 
 article:nth-of-type(2) h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    color: white;
     text-align: center;
-
-    margin: 0;
-    padding: 100px .5em 1.5em;
+    padding-top: 0.4em;
 }
 
-/* ************ */
-/* AVONTUUR */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(1) h3 {
-    background: var(--categorieblauw);
+article:nth-of-type(2) ul.minder, article:nth-of-type(2) button.minder {
+    display: none;
 }
 
-/* ************ */
-/* VIRTUAL REALITY */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(2) h3 {
-    background: var(--categorierood);
+article:nth-of-type(2) button {
+    font-size: 1.2em;
+    font-weight: lighter;
+
+    border: solid 3px;
+    background: none;
+
+    width: 200px;
+    height: 50px;
+
+    
+    color:var(--lettercolor);
 }
 
-/* ************ */
-/* CO-OP */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(3) h3 {
-    background: var(--categoriegroen);
+article:nth-of-type(2) button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+/* ************************* */
+/* UITGELICHT*/
+/* ************************* */
+article:nth-of-type(3) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1em;
 }
 
-/* ************ */
-/* ROLLENSPEL */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(4) h3 {
-    background: var(--categorielila);
+article:nth-of-type(3) li {
+    background: var( --kortingachtergrond);
+    box-shadow: var(--schadowcolor);
 }
 
-/* ************ */
-/* OPEN WERELD */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(5) h3 {
-    background: var(--categoriepaars);
-}
-
-/* ************ */
-/* STRATEGIE */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(6) h3 {
-    background: var(--categoriegeel);
-}
-
-/* ************ */
-/* HORROR */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(7) h3 {
-    background: var(--categorierood);
-}
-
-/* ************ */
-/* VERHAALLIJN */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(8) h3 {
-    background: var(--categorieblauw);
-}
-
-/* ************ */
-/* PUZZEL */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(9) h3 {
-    background: var(--categoriegroen);
-}
-
-/* ************ */
-/* GRATIS TE SPELEN */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(10) h3 {
-    background: var(--categorielila);
-}
-
-/* ************ */
-/* SIMULATIE */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(11) h3 {
-    background: var(--categorierood);
-}
-
-/* ************ */
-/* SPORT */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(12) h3 {
-    background: var(--categorieblauw);
-}
-
-/* ************ */
-/* RACEN */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(13) h3 {
-    background: var(--categoriegeel);
-}
-
-/* ************ */
-/* SURVIVAL */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(14) h3 {
-    background: var(--categorielila);
-}
-
-/* ************ */
-/* ACTIE */
-/* ************ */
-article:nth-of-type(2) li:nth-of-type(15) h3 {
-    background: var(--categoriepaars);
-}
-
-
-
-article:nth-of-type(4) p:nth-of-type(2) {
-    width: fit-content;
-    text-align: center;
-    background: var(--korting);
-    color: var(--kortingfont);
+article:nth-of-type(3) li p {
+    margin: 5px 0 10px 20px;
     font-weight: bolder;
 }
 
-article:nth-of-type(4) ul li p:nth-of-type(3) span {
-    width: fit-content;
-    text-align: center;
+/* ************************* */
+/* KORTING*/
+/* ************************* */
+/* Tekst binnen aanbiedingen */
+article:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+    padding: 0 15px;
+    background-color: var(--selectcolor);
+}
+
+article:nth-of-type(5) li {
+    display: grid;
+    justify-content: center;
+
+    box-shadow: var(--schadowcolor);
+    background: var(--kortingachtergrond);
+    padding-bottom: 10px;
+
+    grid-template-rows: 1fr max-content;
+}
+
+article:nth-of-type(5) ul li p:nth-of-type(1) {
+    font-weight: bold;
+    padding: 0px 0 0 15px;
     text-decoration: line-through;
-    padding: 1em;
-    background: var(--kortingdoorstreept);
     color: var(--kortingfontoud);
 }
+
+article:nth-of-type(5) ul p:nth-of-type(2) {
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 5px 0 5px 15px;
+    background: none;
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(5) ul li p:nth-of-type(3) span {
+    color: var(--korting);
+
+    font-weight: 800;
+    padding: 10px 10px 10px 10px;
+}
+
+/* Afbeelding en grid */
+article:nth-of-type(5) ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+article:nth-of-type(5) a {
+    overflow: hidden;
+}
+
+article:nth-of-type(5) img {
+    overflow: hidden;    
+
+    height: 100%;
+    width: 100%;
+
+    display: block;
+}
+
+/* Meer button */
+article:nth-of-type(5) ul.minder2, article:nth-of-type(5) button.minder2 {
+    display: none;
+}
+
+article:nth-of-type(5) button {
+    font-size: 1.2em;
+    font-weight: lighter;
+
+    border: solid 3px;
+    background: none;
+
+    margin: 0 0 1em 0;
+    width: 200px;
+    height: 50px;
+
+    
+    color:var(--lettercolor);
+    transition: 1s;
+    align-self: center;
+}
+
+article:nth-of-type(5) button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/******* steamdeck/valve afbeelding *******/
+
+article:nth-of-type(6) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article:nth-of-type(6) img{
+    align-self: center;
+    margin: 15px;
+}
+
+/* ************************* */
+/* Sidescrolling*/
+/* ************************* */
+/* Tekst binnen menuknoppen */
+article:nth-of-type(7) {
+    margin: 0 0;
+    padding: 0 15px 15px 15px;
+}
+
+/********* Selectiemenuknoppen *********/
+article:nth-of-type(7) section:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+}
+
+article:nth-of-type(7) section:nth-of-type(1) button {
+    border: none;
+}
+
+article:nth-of-type(7) section:nth-of-type(1) button.knopuit{
+    border: none;
+    background: none;
+    color:var(--menubarknopuit);
+}
+
+.knopaan {
+    background-color: var(--selectcolor);
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(7) button{
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px 20px 20px;
+    font-size: 0.9em;
+}
+
+/* Selecteren ul */
+article:nth-of-type(7) ul.aan { 
+    margin: -15px;
+    background: var(--selectcolor);
+}
+
+article:nth-of-type(7) ul.uit {
+    display: none;
+ }
+
+article:nth-of-type(7) ul.aan{
+    margin: -15px;
+    background: var(--selectcolor);
+}
+
+article:nth-of-type(7) li {
+    margin: 15px;
+    justify-content: center;
+
+    box-shadow: var(--schadowcolor);
+    background: var(--kortingachtergrond);
+    padding-bottom: 10px;
+}
+
+article:nth-of-type(7) ul li p:nth-of-type(1) {
+    font-weight: bold;
+    padding: 0px 0 0 15px;
+    text-decoration: line-through;
+    color: var(--kortingfontoud);
+}
+
+article:nth-of-type(7) ul p:nth-of-type(2) {
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 5px 0 5px 15px;
+    background: none;
+    color: var(--lettercolor);
+}
+
+article:nth-of-type(7) ul li p:nth-of-type(3) span {
+    color: var(--korting);
+
+    font-weight: 800;
+    padding: 10px 10px 10px 10px;
+}
+
+/* Afbeelding */
+article:nth-of-type(7) ul {
+    display: flex;
+    overflow: scroll;
+    gap: 1.3em;
+}
+
+article:nth-of-type(7) a {
+    overflow: hidden;
+}
+
+article:nth-of-type(7) img {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    display: block;
+}
+

@@ -129,10 +129,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Catergoie vraag opgelost. Achteraf toch aangepast.
+  - Zeker betermaken! Dat is hartstikke goed!
+
 
 </details>
 
@@ -146,16 +145,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik vind dat ik zoals vorigeweek vrij goed bezig ben. Ik pak het javascript en alle codes waar we het vorig jaar over hebben weer vrij snel op. Het is mij ook opgevallen dat ik met een veel kritischer oog kijk naar het werk dat ik maak. Ik kijk voornamelijk in het oog van de gebruiker. Vind ik het logisch als dit zo staat? Of is dit makkelijk te lezen?
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Koen Dekker     | Soraya        | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  |  | en dit             | Heeft een vraag over een cirkel    |     |
+  | Moet ik nog meer toevoegen aan mijn huidige pagina? | | nog een punt | |
   | ...            | ...                | ...          | ...              |
 
 

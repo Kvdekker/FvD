@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -10,16 +11,18 @@
     --navcolorrand: #040021;
     --selectcolor: rgb(12, 32, 189);
     --form: rgb(12, 32, 189);
-    --kortingdoorstreept: #112375;
     --kortingfontoud: #d95fe4;
-    --kortingdik: black;
+    --bijtekst: rgb(0, 153, 255);
     --lettercolor: white;
+    --lettercolorfooter: rgba(255, 255, 255, 0.695);
     --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
     --kortingachtergrond: #000625;
-    --korting:#A1CD44;
-    --kortingfont: rgb(0, 65, 0);
+    --korting: #A1CD44;
     --schadowcolor: #000931 0px 0px 10px;
-    --menubarknopuit: rgb(65, 87, 255);
+    --menubarknopuit: rgb(190, 198, 255);
+    --footer: #000625;
+    --metacritici: rgba(42, 213, 59, 0.867);
+    --winkelwagenkleur: #f7ea00;
 }
 
 body {
@@ -35,16 +38,80 @@ header {
     width: 100%;
 }
 
-
-/* ************************* */
+/* ********* */
 /* NAV */
-/* ************************* */
+/* ********* */
+
+/* Hamburgermenu */
+.hamburger {
+    margin: 15px;
+    height: 1.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hamburger span {
+    display: block;
+
+    width: 25px;
+    height: 3px;
+
+    align-items: center;
+
+    transition: all 0.5s ease-out;
+    background-color: var(--lettercolor);
+    border-radius: 10em;
+}
+
+/* Hamburger animatie */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+}
 
 /* Steam logo */
-nav section img {
-    margin: 1em;
-    width: 2em;
+nav section a>img {
+    animation: draaienmaar 2s ease-in-out;
+    margin: 15px 15px;
     display: block;
+}
+
+@keyframes draaienmaar {
+    0% {
+        transform: translateX(0em) rotate(0);
+    }
+
+    25% {
+        transform: translateX(5em) rotate(360deg);
+    }
+
+    50% {
+        transform: translateX(-4em) rotate(-300deg);
+    }
+
+    70% {
+        transform: translateX(2em) rotate(100deg);
+    }
+
+    80% {
+        transform: translateX(-1em) rotate(-50deg);
+    }
+
+    90% {
+        transform: translateX(0.7em) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(0em) rotate(0deg);
+    }
 }
 
 /* Winkelwagen */
@@ -52,16 +119,59 @@ nav section button:nth-of-type(2) {
     filter: invert(1);
 }
 
-nav button {
+nav button:nth-of-type(2),
+nav section button:nth-of-type(1) {
     background: none;
     border: none;
     transition: 1s;
+    width: fit-content;
+}
+
+nav button:nth-of-type(2)>img {
+    display: block;
+    width: 2em;
+    margin: 15px 15px;
+}
+
+nav section button:nth-of-type(2):focus {
+    animation: oinkoink 3s ease-in-out;
+}
+
+@keyframes oinkoink {
+    0% {
+        transform: none;
+    }
+
+    30% {
+        transform: scaleY(0.5) translateY(1em);
+    }
+
+    35% {
+        transform: scaleY(1.1) translateY(-1em);
+    }
+
+    39% {
+        transform: none;
+    }
+
+    60% {
+        transform: scaleY(0.5) translateY(1em);
+    }
+
+    65% {
+        transform: scaleY(1.1) translateY(-1em);
+    }
+
+    70% {
+        transform: none;
+    }
 }
 
 /* Navbar zelf */
-nav section {
+nav>section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     background-color: var(--backgroundcolor);
     border-bottom: solid 1px var(--navcolorrand);
@@ -75,15 +185,16 @@ nav ul {
     right: 0;
 
     transition: 0.4s ease-in-out;
-    transform: translateY(-200%);
+    transform: translateY(-100%);
 
     background-color: var(--navcolor);
 }
 
-.openMaken {
+.openMaken,
+ul:focus-within {
+    display: block;
     transition: 0.3s ease-in-out;
     transform: translateY(0);
-    display: block;
 }
 
 nav a {
@@ -114,15 +225,11 @@ nav img {
     margin: 1em 1em 1em 0;
 }
 
-.buttonlicht {
-    transition: 0.5s;
-    filter: drop-shadow(0 0 5px  rgb(255, 255, 255)); 
-}
-
 form img {
     padding: 0 0 0 1em;
 }
 
+/* Searchbar */
 input {
     background: none;
     border: none;
@@ -141,26 +248,27 @@ input::placeholder {
 }
 
 input:focus {
-    background-color: var(--selectcolor);
+    transition: 1s;
+    background-color: var(--bijtekst);
     color: white;
 
     border: none;
     outline: none;
 }
 
-/* ************************* */
+/* ********* */
 /* MAIN*/
-/* ************************* */
+/* ********* */
 
 main {
     background-color: var(--backgroundcolor);
 }
 
-article:nth-of-type(n+2){
+article:nth-of-type(n+2) {
     margin: 15px;
 }
 
-article:nth-of-type(1) img{
+article:nth-of-type(1) img {
     width: 100%;
     left: 0;
     right: 0;
@@ -195,9 +303,9 @@ article>h2 {
     padding: 15px 0 0.5em 0;
 }
 
-/* ************************* */
+/* ********* */
 /* ARTICLES*/
-/* ************************* */
+/* ********* */
 
 article a {
     display: flex;
@@ -211,21 +319,28 @@ article li h3 {
 
 
 
-/* ************************* */
+/* ********* */
 /* CATEGORIEEN*/
-/* ************************* */
-
-article:nth-of-type(2) li {
-    background: var(--selectcolor);
-
-    border-radius: 0.5em;
+/* ********* */
+article:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
 }
 
 article:nth-of-type(2) ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
-    gap: 1em;
-    margin-bottom: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+li:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+li {
+    transition: 1s;
 }
 
 
@@ -234,7 +349,10 @@ article:nth-of-type(2) li {
     margin: 0.2em;
     display: flex;
     justify-content: center;
+
+    border-radius: 0.5em;
     box-shadow: var(--schadowcolor);
+    background: var(--selectcolor);
 }
 
 article:nth-of-type(2) a {
@@ -252,31 +370,36 @@ article:nth-of-type(2) h3 {
     padding-top: 0.4em;
 }
 
-article:nth-of-type(2) ul.minder, article:nth-of-type(2) button.minder {
+article:nth-of-type(2) ul.minder,
+article:nth-of-type(2) button.minder {
     display: none;
 }
 
 article:nth-of-type(2) button {
-    font-size: 1.2em;
-    font-weight: lighter;
+    font-size: 1em;
+    font-weight: bold;
 
     border: solid 3px;
     background: none;
 
-    width: 200px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
 
-    
-    color:var(--lettercolor);
+
+    color: var(--lettercolor);
+
+    transition: 1s;
+    align-self: center;
 }
 
 article:nth-of-type(2) button:hover {
     transform: scale(1.1);
     transition: 1s;
 }
-/* ************************* */
+
+/* ********* */
 /* UITGELICHT*/
-/* ************************* */
+/* ********* */
 article:nth-of-type(3) ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -284,7 +407,7 @@ article:nth-of-type(3) ul {
 }
 
 article:nth-of-type(3) li {
-    background: var( --kortingachtergrond);
+    background: var(--kortingachtergrond);
     box-shadow: var(--schadowcolor);
 }
 
@@ -293,9 +416,9 @@ article:nth-of-type(3) li p {
     font-weight: bolder;
 }
 
-/* ************************* */
+/* ********* */
 /* KORTING*/
-/* ************************* */
+/* ********* */
 /* Tekst binnen aanbiedingen */
 article:nth-of-type(5) {
     display: flex;
@@ -331,17 +454,17 @@ article:nth-of-type(5) ul p:nth-of-type(2) {
     color: var(--lettercolor);
 }
 
-article:nth-of-type(5) ul li p:nth-of-type(3) span {
+article:nth-of-type(5) ul li p:nth-of-type(3) {
     color: var(--korting);
 
     font-weight: 800;
-    padding: 10px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 /* Afbeelding en grid */
 article:nth-of-type(5) ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     margin-bottom: 1em;
 }
@@ -351,7 +474,7 @@ article:nth-of-type(5) a {
 }
 
 article:nth-of-type(5) img {
-    overflow: hidden;    
+    overflow: hidden;
 
     height: 100%;
     width: 100%;
@@ -360,33 +483,34 @@ article:nth-of-type(5) img {
 }
 
 /* Meer button */
-article:nth-of-type(5) ul.minder2, article:nth-of-type(5) button.minder2 {
+article:nth-of-type(5) ul.minder2,
+article:nth-of-type(5) button.minder2 {
     display: none;
 }
 
 article:nth-of-type(5) button {
-    font-size: 1.2em;
-    font-weight: lighter;
+    font-size: 1em;
+    font-weight: bold;
 
     border: solid 3px;
     background: none;
 
-    margin: 0 0 1em 0;
-    width: 200px;
-    height: 50px;
+    margin: 0 0 15px 0;
+    width: 150px;
+    height: 40px;
 
-    
-    color:var(--lettercolor);
+
+    color: var(--lettercolor);
     transition: 1s;
     align-self: center;
 }
 
 article:nth-of-type(5) button:hover {
-    transform: scale(1.1);
+    border-radius: 2em;
     transition: 1s;
 }
 
-/******* steamdeck/valve afbeelding *******/
+/*** steamdeck/valve afbeelding ***/
 
 article:nth-of-type(6) {
     display: flex;
@@ -394,21 +518,22 @@ article:nth-of-type(6) {
     justify-content: center;
 }
 
-article:nth-of-type(6) img{
+article:nth-of-type(6) img {
     align-self: center;
+    width: 400px;
     margin: 15px;
 }
 
-/* ************************* */
+/* ********* */
 /* Sidescrolling*/
-/* ************************* */
+/* ********* */
 /* Tekst binnen menuknoppen */
 article:nth-of-type(7) {
     margin: 0 0;
     padding: 0 15px 15px 15px;
 }
 
-/********* Selectiemenuknoppen *********/
+/*** Selectiemenuknoppen ***/
 article:nth-of-type(7) section:nth-of-type(1) {
     display: flex;
     flex-direction: row;
@@ -418,10 +543,10 @@ article:nth-of-type(7) section:nth-of-type(1) button {
     border: none;
 }
 
-article:nth-of-type(7) section:nth-of-type(1) button.knopuit{
+article:nth-of-type(7) section:nth-of-type(1) button.knopuit {
     border: none;
     background: none;
-    color:var(--menubarknopuit);
+    color: var(--menubarknopuit);
 }
 
 .knopaan {
@@ -429,30 +554,28 @@ article:nth-of-type(7) section:nth-of-type(1) button.knopuit{
     color: var(--lettercolor);
 }
 
-article:nth-of-type(7) button{
+article:nth-of-type(7) button {
     border-radius: 8px 8px 0 0;
     padding: 10px 20px 20px 20px;
     font-size: 0.9em;
 }
 
 /* Selecteren ul */
-article:nth-of-type(7) ul.aan { 
-    margin: -15px;
+article:nth-of-type(7) ul.aan {
     background: var(--selectcolor);
 }
 
 article:nth-of-type(7) ul.uit {
     display: none;
- }
+}
 
-article:nth-of-type(7) ul.aan{
+article:nth-of-type(7) ul.aan {
     margin: -15px;
     background: var(--selectcolor);
 }
 
 article:nth-of-type(7) li {
     margin: 15px;
-    justify-content: center;
 
     box-shadow: var(--schadowcolor);
     background: var(--kortingachtergrond);
@@ -470,32 +593,405 @@ article:nth-of-type(7) ul p:nth-of-type(2) {
     font-size: x-large;
     font-weight: bolder;
     padding: 5px 0 5px 15px;
-    background: none;
     color: var(--lettercolor);
 }
 
-article:nth-of-type(7) ul li p:nth-of-type(3) span {
+article:nth-of-type(7) ul li p:nth-of-type(3) {
     color: var(--korting);
 
     font-weight: 800;
-    padding: 10px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 /* Afbeelding */
 article:nth-of-type(7) ul {
     display: flex;
     overflow: scroll;
-    gap: 1.3em;
+
 }
 
 article:nth-of-type(7) a {
     overflow: hidden;
+
+    width: 225px;
+    height: 450px;
 }
 
 article:nth-of-type(7) img {
-    width: 300px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     display: block;
+
 }
 
+
+/* ********* */
+/* Footer */
+/* ********* */
+
+footer {
+    font-size: 12px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 15px;
+    background-color: var(--footer);
+    color: var(--lettercolorfooter);
+}
+
+footer>img {
+    filter: invert(1);
+    width: 7em;
+    padding-right: 10px;
+
+    vertical-align: middle;
+}
+
+footer>p:first-of-type {
+    color: var(--lettercolor);
+
+    font-weight: bold;
+
+    margin: auto 0;
+}
+
+
+footer p {
+    margin: 10px 0;
+}
+
+footer ul img {
+    filter: invert(1);
+    width: 3em;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer hr {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+
+    border: solid 1px
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroundcolor: rgb(24, 24, 24);
+        --navcolor: rgb(44, 44, 44);
+        --navcolorrand: #c5c5c5;
+        --selectcolor: rgb(38, 38, 38);
+        --form: rgb(22, 22, 22);
+        --kortingfontoud: #d95fe4;
+        --bijtekst: rgb(255, 99, 99);
+        --lettercolor: white;
+        --lettercolorfooter: rgba(255, 255, 255, 0.695);
+        --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
+        --kortingachtergrond: #0f0f0f;
+        --korting: #A1CD44;
+        --schadowcolor: #000000 0px 0px 10px;
+        --menubarknopuit: rgb(179, 179, 179);
+        --footer: #000000;
+    }
+}
+
+
+
+/* ********************** */
+/* MGS PAGINA 2 */
+/* ********************** */
+
+/* Headerpicture */
+#MGS article:nth-of-type(1) img {
+    margin-top: 3.5em;
+    width: 100%;
+}
+
+/* H1 */
+#MGS article:nth-of-type(2) h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Eerste tekst */
+#MGS article:nth-of-type(2) p {
+    padding: 3px 0 3px 0;
+}
+
+#MGS article:nth-of-type(2) p:nth-of-type(-n+3) {
+    color: var(--lettercolorfooter);
+}
+
+#MGS article:nth-of-type(2) p:nth-of-type(-n+3) span {
+    font-weight: bolder;
+    color: var(--bijtekst);
+}
+
+#MGS article:nth-of-type(2) p:nth-of-type(3) {
+    margin-bottom: 10px;
+}
+
+#MGS article:nth-of-type(2) p:nth-of-type(4) {
+    margin-bottom: 0px;
+}
+
+#MGS article:nth-of-type(2) {
+    margin: 0 15px;
+}
+
+#MGS article:nth-of-type(2) p {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ******************* */
+/* Recensies */
+/* ******************* */
+#MGS article:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+}
+
+#MGS article:nth-of-type(3)>p:first-of-type {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, rgba(1, 222, 15, 1) 90%, rgba(255, 0, 0, 1) 90%);
+    border-image-slice: 1;
+}
+
+#MGS article:nth-of-type(3) ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#MGS article:nth-of-type(3) li {
+    background: none;
+    box-shadow: none;
+}
+
+#MGS article:nth-of-type(3) li p {
+    margin: 0 10px 0 -5px;
+}
+
+#MGS article:nth-of-type(3) section p:first-of-type {
+    font-size: 1.5em;
+    background-color: var(--metacritici);
+    width: 50px;
+    height: 50px;
+
+    padding: .5em;
+    margin: 0 8px 0 0;
+}
+
+#MGS article:nth-of-type(3) section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#MGS article:nth-of-type(3) section p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#MGS article:nth-of-type(3) button {
+    background: none;
+    border: none;
+    transition: 1s;
+    width: fit-content;
+}
+
+#MGS article:nth-of-type(3) button img {
+    width: 2em;
+    filter: invert(1);
+}
+
+#MGS article:nth-of-type(3) ul li:nth-of-type(3) img {
+    transform: rotate(180deg);
+}
+
+#MGS article:nth-of-type(3) section img {
+    width: 35px;
+    height: 35px;
+}
+
+/* ******************* */
+/* Foto's */
+/* ******************* */
+
+#MGS article:nth-of-type(4) {
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+#MGS article:nth-of-type(4) video {
+    max-width: 100%;
+    height: auto;
+}
+
+#MGS article:nth-of-type(4) img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************* */
+/*Artikel kopen*/
+/* ******************* */
+#MGS article:nth-of-type(5) {
+    background-color: var(--backgroundcolor);
+}
+
+#MGS article:nth-of-type(5) section:nth-of-type(1) {
+    margin-bottom: 15px;
+}
+
+#MGS article:nth-of-type(5) section:nth-of-type(2) {
+    padding: .5em;
+    background-color: var(--kortingachtergrond);
+    box-shadow: var(--schadowcolor);
+}
+
+#MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(1) {
+    color: var(--bijtekst);
+}
+
+/* Hoofdprijs */
+#MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(2) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 5px 0 5px 15px;
+}
+
+/* Oudeprijs */
+#MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(3) span {
+    font-weight: normal;
+    padding: 0px 0 0 15px;
+    text-decoration: line-through;
+    color: var(--kortingfontoud);
+}
+
+/* Kortingpercentage */
+#MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(3) {
+    font-size: 1em;
+    color: var(--korting);
+
+    font-weight: bold;
+    padding: 0px 10px 10px 0px;
+}
+
+#MGS article:nth-of-type(5) button {
+    width: 100%;
+
+    border: none;
+    background: var(--winkelwagenkleur);
+
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Functies */
+#MGS article:nth-of-type(6) {
+    flex-direction: column;
+}
+
+#MGS article:nth-of-type(6) ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#MGS article:nth-of-type(6) li {
+    margin: 2px 0;
+
+    line-height: 3em;
+    height: 3em;
+    background-color: var(--kortingachtergrond);
+}
+
+#MGS article:nth-of-type(6) li img {
+    margin: 0 10px;
+    width: 26px;
+    height: 16px;
+
+    background-color: var(--kortingachtergrond);
+}
+
+/* Talen */
+#MGS article:nth-of-type(7) summary {
+    margin-bottom: 15px;
+    transition: 1s;
+}
+
+#MGS article:nth-of-type(7) ul {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    transition: 1s;
+}
+
+#MGS article:nth-of-type(7) li {
+    line-height: 3em;
+    height: 3em;
+    box-shadow: none;
+    margin: 2px 0;
+    padding-left: 15px;
+}
+
+
+
+/* PEGI */
+#MGS article:nth-of-type(8) section {
+    display: flex;
+}
+
+#MGS article:nth-of-type(8) img {
+    width: 60px;
+    height: 73px;
+
+    margin-right: 10px;
+}
+
+#MGS article:nth-of-type(8) p {
+    font-size: 11px;
+    width: 90px;
+}
+
+/* Over dit spel */
+#MGS article:nth-of-type(9) p {
+    line-height: 1.5em;
+}
+
+/* Systeemeisen */
+#MGS article:nth-of-type(10) {
+    margin: 0 0 0 15px;
+}
+
+#MGS article:nth-of-type(10) li {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+#MGS article:nth-of-type(10) strong {
+    color: var(--lettercolorfooter);
+
+    font-weight: normal;
+}
+
+#MGS article:nth-of-type(10) p {
+    font-size: 14px;
+    color: var(--lettercolorfooter);
+    
+    font-weight: 100;
+
+    padding: 1em 0;
+}

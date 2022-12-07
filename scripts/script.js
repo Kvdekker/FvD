@@ -1,5 +1,5 @@
 //navbar knop
-let steamButton = document.querySelector("nav button");
+let steamButton = document.querySelector(".hamburger");
 let navOpen = document.querySelector("nav ul");
 
 steamButton.addEventListener("click", navOpenmaken);
@@ -9,6 +9,15 @@ function navOpenmaken(){
     steamButton.classList.toggle("buttonlicht");
 }
 
+
+// Hamburgermenu
+var hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", hamburgeranimatie);
+
+function hamburgeranimatie() {
+    hamburger.classList.toggle("active");
+}
 
 
 
@@ -35,8 +44,6 @@ function meerweergeven2() {
     meerUl1.classList.remove("minder2");
     meerKnop1.classList.add("minder2");
 }
-
-
 
 
 

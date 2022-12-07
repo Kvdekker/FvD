@@ -119,11 +119,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Koen                                           | Soraya                       | student 3    | student 4        |
-  | ---                                            | ---                          | ---          | ---              |
-  | Vraag over categorieën                         | Foto kan niet in het midden. | en ik dit    | en dan ik dat    |
-  | en vraag over opdracht: wel betermaken of niet?| Ordered list                 | nog een punt | dit wil ik zeker |
-  | ...                                            | ...                          | ...          | ...              |
+  | Koen                                           | Soraya                       | 
+  | Vraag over categorieën                         | Foto kan niet in het midden. | 
+  | en vraag over opdracht: wel betermaken of niet?| Ordered list                 | 
 
 
   ### Verslag van meeting
@@ -151,11 +149,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Koen Dekker     | Soraya        | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  |  | en dit             | Heeft een vraag over een cirkel    |     |
-  | Moet ik nog meer toevoegen aan mijn huidige pagina? | | nog een punt | |
-  | ...            | ...                | ...          | ...              |
+  | Koen Dekker     | Soraya        | 
+  | Moet ik nog meer toevoegen aan mijn huidige pagina?| Heeft een vraag over een cirkel    |   
+
+
 
 
   ### Verslag van meeting

@@ -174,34 +174,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
-  <summary>uitwerken na test in 8e werkgroep</summary>
+  <summary>Ik heb de website over het algemeen goed aangepast zodat de website meer toegangelijk is voor verschillende soorten aandoeningen. Met name op het zichtfactor is het daarin erg opgestoken.</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De screenreader was wederom amper te gebruiken. Ik ben er nog niet achter of dit ligt aan mijn screenreader zelf of aan mijn website. Ik ga vragen aan een klasgenoot of die het op hun Macbook kan testen.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Hoe kan dit opgelost worden?
+  Als het probleem ligt bij mijn website: namen aanpassen zodat hij alleen de link noemt ipv ook de afbeelding.
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Met de muis en het toetsenbord (bijvoorbeeld door middel van tab) is de website goed door te navigeren.
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Na het testen met het schockaparaat kwamen we er ook achter dat de website prima te bedienen is. Wel met de tabknop. De muis is slecht te gebruiken.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
-
+  Hoe kan dit opgelost worden?
+  Door de tabtoets te gebruiken.
+  
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  We kwamen er achter dat een aantal lettertyp-kleuren te donker waren om goed te kunnen zien.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Hoe kan dit opgelost worden?
+  Ik heb inmiddels de kleuren aangepast zodat het beter leesbaar is. Ook getest met de brillen.
 </details>
 
 
@@ -214,17 +211,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Deze week ben ik vooral bezig geweest met mijn website afmaken. Ik heb veel moeite met de goede code vinden die werkt op het item die ik wil aanpassen. Hierdoor ben ik vaak wat langer bezig. Maar als ik het afheb dan werkt het ook goed. Dus over het algemeen gaat het vrij goed.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Koen    | Soraya 2          | 
+  | ---            | ---                | 
+  | Vraag over Fontsizes | Vraag over responsive            | 
+  | Vraag of er nog meer dingen bij moeten voor en voldoende | Vraag over grid | 
+
 
 
   ### Verslag van meeting

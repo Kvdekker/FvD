@@ -113,3 +113,57 @@ function knop3kiezen() {
     ul2.classList.remove("aan");
     ul2.classList.add("uit");
 }
+
+// Cowboycat
+
+let cowboycatKnop = document.querySelector("article:nth-of-type(6) img");
+
+let allImg = document.querySelectorAll("img");
+let allLi = document.querySelectorAll("li");
+let allP = document.querySelectorAll("p");
+let allHead = document.querySelectorAll("h1, h2, h3")
+let allBackground = document.querySelectorAll("header, nav, main, section, ul, footer")
+let allButton = document.querySelectorAll("button");
+
+
+
+cowboycatKnop.addEventListener("click", cowboycattime);
+
+function cowboycattime() {
+    allImg.forEach((alleImg) => {
+        alleImg.src = "./images/cowboycat.gif";
+        let cowboycatFoto = document.querySelector("article:nth-of-type(6) img");
+        alleImg.classList.add("cowboycat")
+    })
+    
+    allLi.forEach((alleLi) => {
+        alleLi.src = "./images/cowboycat.jpg";
+        alleLi.classList.add("polonaisecat")
+    })
+
+    allHead.forEach((alleHead) => {
+        let headTekst = ["YeeeMiauw"];
+        alleHead.textContent = headTekst;
+    })
+
+    allP.forEach((alleP) => {
+        let cowboycatTekst = ["Meowdy Cowcat, Welcome to the Cowcat Meowdo Rodeo Show"];
+        alleP.textContent = cowboycatTekst;
+    })
+
+    allBackground.forEach((alleBack) => {
+        alleBack.classList.add("regenboog");
+    })
+
+    allButton.forEach((alleB) => {
+        let cowboycatTekst = ["Beter dan laserogen?"];
+        alleB.textContent = cowboycatTekst;
+    })
+
+    let audioCat = document.querySelector(".aah");
+    
+    audioCat.play();
+    audioCat.volume = 0.1;
+}
+
+

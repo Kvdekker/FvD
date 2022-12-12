@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 :root {
@@ -17,7 +16,7 @@
     --lettercolorfooter: rgba(255, 255, 255, 0.695);
     --gamecolor: linear-gradient(145deg, rgba(44, 46, 133, 1) 0%, rgba(0, 114, 255, 1) 100%);
     --kortingachtergrond: #000625;
-    --korting: #A1CD44;
+    --korting: #bfff35;
     --schadowcolor: #000931 0px 0px 10px;
     --menubarknopuit: rgb(190, 198, 255);
     --footer: #000625;
@@ -26,6 +25,7 @@
 }
 
 body {
+
     color: var(--lettercolor);
     font-family: arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -36,6 +36,16 @@ header {
     top: 0;
     z-index: 100;
     width: 100%;
+}
+
+li:hover,
+li:focus-within {
+    transition: 0.2s;
+    transform: scale(1.02);
+}
+
+li {
+    transition: 0.2s;
 }
 
 /* ********* */
@@ -74,7 +84,7 @@ header {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Steam logo */
@@ -137,6 +147,7 @@ nav section button:nth-of-type(2):focus {
     animation: oinkoink 3s ease-in-out;
 }
 
+/* Winkelwagen animatie */
 @keyframes oinkoink {
     0% {
         transform: none;
@@ -314,7 +325,7 @@ article a {
 
 article li h3 {
     padding: 0.5em;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 
@@ -332,15 +343,6 @@ article:nth-of-type(2) ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5em;
     margin-bottom: 0.5em;
-}
-
-li:hover {
-    transition: 0.5s;
-    transform: scale(1.02);
-}
-
-li {
-    transition: 1s;
 }
 
 
@@ -370,12 +372,15 @@ article:nth-of-type(2) h3 {
     padding-top: 0.4em;
 }
 
+
+/* Meerbuttons */
 article:nth-of-type(2) ul.minder,
 article:nth-of-type(2) button.minder {
     display: none;
 }
 
-article:nth-of-type(2) button {
+article:nth-of-type(2) button,
+article:nth-of-type(5) button {
     font-size: 1em;
     font-weight: bold;
 
@@ -388,13 +393,19 @@ article:nth-of-type(2) button {
 
     color: var(--lettercolor);
 
-    transition: 1s;
+    transition: 0.5s;
     align-self: center;
 }
 
-article:nth-of-type(2) button:hover {
+article:nth-of-type(2) button:hover,
+article:nth-of-type(2) button:focus,
+article:nth-of-type(5) button:hover,
+article:nth-of-type(5) button:focus {
+    border-radius: 2em;
     transform: scale(1.1);
-    transition: 1s;
+    background-color: var(--lettercolor);
+    color: var(--backgroundcolor);
+    transition: 0.5s;
 }
 
 /* ********* */
@@ -430,11 +441,9 @@ article:nth-of-type(5) {
 
 article:nth-of-type(5) li {
     display: grid;
-    justify-content: center;
 
     box-shadow: var(--schadowcolor);
     background: var(--kortingachtergrond);
-    padding-bottom: 10px;
 
     grid-template-rows: 1fr max-content;
 }
@@ -488,40 +497,19 @@ article:nth-of-type(5) button.minder2 {
     display: none;
 }
 
-article:nth-of-type(5) button {
-    font-size: 1em;
-    font-weight: bold;
-
-    border: solid 3px;
-    background: none;
-
-    margin: 0 0 15px 0;
-    width: 150px;
-    height: 40px;
-
-
-    color: var(--lettercolor);
-    transition: 1s;
-    align-self: center;
-}
-
-article:nth-of-type(5) button:hover {
-    border-radius: 2em;
-    transition: 1s;
-}
-
 /*** steamdeck/valve afbeelding ***/
 
 article:nth-of-type(6) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
 article:nth-of-type(6) img {
     align-self: center;
     width: 400px;
-    margin: 15px;
+    margin-bottom: 15px;
 }
 
 /* ********* */
@@ -539,10 +527,6 @@ article:nth-of-type(7) section:nth-of-type(1) {
     flex-direction: row;
 }
 
-article:nth-of-type(7) section:nth-of-type(1) button {
-    border: none;
-}
-
 article:nth-of-type(7) section:nth-of-type(1) button.knopuit {
     border: none;
     background: none;
@@ -558,20 +542,18 @@ article:nth-of-type(7) button {
     border-radius: 8px 8px 0 0;
     padding: 10px 20px 20px 20px;
     font-size: 0.9em;
+    border: none;
 }
 
 /* Selecteren ul */
 article:nth-of-type(7) ul.aan {
     background: var(--selectcolor);
+    margin: -15px;
+    background: var(--selectcolor);
 }
 
 article:nth-of-type(7) ul.uit {
     display: none;
-}
-
-article:nth-of-type(7) ul.aan {
-    margin: -15px;
-    background: var(--selectcolor);
 }
 
 article:nth-of-type(7) li {
@@ -634,6 +616,7 @@ footer {
     font-size: 12px;
 
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 
     padding: 15px;
@@ -644,37 +627,25 @@ footer {
 footer>img {
     filter: invert(1);
     width: 7em;
-    padding-right: 10px;
+    padding-bottom: 10px;
 
     vertical-align: middle;
 }
 
-footer>p:first-of-type {
-    color: var(--lettercolor);
 
-    font-weight: bold;
-
-    margin: auto 0;
-}
-
-
-footer p {
+footer li {
     margin: 10px 0;
 }
 
 footer ul img {
     filter: invert(1);
     width: 3em;
-    vertical-align: middle;
     margin-right: 10px;
 }
 
-footer hr {
-    width: 100%;
-    top: 0;
-    bottom: 0;
-
-    border: solid 1px
+footer ul:nth-of-type(2) {
+    flex-direction: row;
+    border-top: 1px var(--lettercolorfooter) solid;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -814,6 +785,32 @@ footer hr {
     filter: invert(1);
 }
 
+#MGS article:nth-of-type(3) button:focus  {
+    animation: likedis 1s;
+}
+
+
+@keyframes likedis {
+    0% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform:rotate(20deg) scale(0.5);
+        animation-timing-function: ease-in;
+    }
+
+    20% {
+        transform: rotate(0deg) scale(2);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
 #MGS article:nth-of-type(3) ul li:nth-of-type(3) img {
     transform: rotate(180deg);
 }
@@ -830,12 +827,13 @@ footer hr {
 #MGS article:nth-of-type(4) {
     display: flex;
     overflow: scroll;
-    scroll-behavior: smooth;
+    margin: 0px;
 }
 
 #MGS article:nth-of-type(4) video {
     max-width: 100%;
-    height: auto;
+    height: fit-content;
+    align-self: center;
 }
 
 #MGS article:nth-of-type(4) img {
@@ -899,8 +897,20 @@ footer hr {
     font-weight: bold;
 }
 
+#MGS article:nth-of-type(5) section:nth-of-type(2) button:hover {
+    transform: scale(1);
+    background-color: var(--korting);
+}
 
+#MGS article:nth-of-type(5) section:nth-of-type(2) button:focus {
+    transform: scale(1);
+    background-color: var(--kortingfontoud);
+}
+
+
+/* ******************* */
 /* Functies */
+/* ******************* */
 #MGS article:nth-of-type(6) {
     flex-direction: column;
 }
@@ -990,8 +1000,251 @@ footer hr {
 #MGS article:nth-of-type(10) p {
     font-size: 14px;
     color: var(--lettercolorfooter);
-    
+
     font-weight: 100;
 
     padding: 1em 0;
+}
+
+@media (min-width: 500px) {
+    main {
+        padding: 0 1em;
+    }
+
+    /* 1e img */
+    article:nth-of-type(1) img {
+        width: 100%;
+        margin: 3.5em 0 0 0;
+        border-radius: 0 0 1em 1em;
+    }
+
+    /* Categorieen */
+    article:nth-of-type(2) ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* Aanbiedingen en korting */
+    article:nth-of-type(5) {
+        margin: 0 -1em;
+    }
+
+    article:nth-of-type(5) section ul {
+        padding: 0 1em;
+    }
+
+    /* Steam deck en index */
+    article:nth-of-type(6) {
+        padding: 0 5em;
+    }
+
+    
+    #MGS article:nth-of-type(6) {
+        padding: 0 0;
+    }
+
+    /* Bestverkocht etc */
+    article:nth-of-type(7) section:nth-of-type(2) {
+        margin: 0 -1em;
+    }
+
+    footer {
+        padding: 1em 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 0 5em;
+    }
+
+    /* 1e img */
+    article:nth-of-type(1) img {
+        width: 100%;
+        margin: 3.5em 0 0 0;
+        border-radius: 0 0 1em 1em;
+    }
+
+    /* Categorieen */
+    article:nth-of-type(2) ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5em;
+        margin-bottom: 15px;
+    }
+
+    /* Aanbiedingen en korting */
+    article:nth-of-type(4) {
+        width: 70%;
+        margin: 0 auto 15px auto;
+    }
+
+    /* Aanbiedingen en korting */
+    article:nth-of-type(5) {
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    article:nth-of-type(5) section ul {
+        padding: 0 1em;
+    }
+
+    /* Afbeelding en grid */
+    article:nth-of-type(5) {
+        margin: 0 -5em;
+    }
+
+    article:nth-of-type(5) h2 {
+        margin: 0 5em;
+    }
+
+    article:nth-of-type(5) ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+        margin: 0 50px 15px 50px;
+    }
+
+    /* Bestverkocht etc */
+    article:nth-of-type(7) section:nth-of-type(2) {
+        margin: 0 -5em;
+    }
+
+    /* MGS afbeeldingen */
+
+    #MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(2) {
+        font-size: 3em;
+        font-weight: bolder;
+        padding: 5px 0 5px 15px;
+    }
+
+    #MGS article:nth-of-type(4) {
+        width: auto;
+        margin: 0;
+    }
+
+    #MGS article:nth-of-type(4) img,
+    video {
+        margin: 10px;
+        min-width: 50%;
+        height: fit-content;
+    }
+
+    #MGS article:nth-of-type(5),
+    #MGS article:nth-of-type(5) h2 {
+        margin: 0;
+    }
+
+    footer {
+        padding: 1em 90px;
+    }
+
+}
+
+.cowboycat {
+    animation-name: dancingcat;
+    animation-duration: 0.48s;
+    animation-iteration-count: infinite;
+}
+
+.polonaisecat {
+    animation-name: movingcat;
+    animation-duration: 0.48s;
+    animation-iteration-count: infinite;
+}
+
+.regenboog {
+    animation-name: djensen;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: all;
+}
+
+
+
+@keyframes djensen {
+    0% {
+        background-color: red;
+    }
+
+    10% {
+        background-color: rgb(255, 106, 0);
+    }
+
+    20% {
+        background-color: rgb(255, 251, 0);
+    }
+
+    30% {
+        background-color: rgb(51, 255, 0);
+    }
+
+    40% {
+        background-color: rgb(0, 255, 106);
+    }
+
+    50% {
+        background-color: rgb(0, 247, 255);
+    }
+
+    60% {
+        background-color: rgb(0, 68, 255);
+    }
+
+    70% {
+        background-color: rgb(132, 0, 255);
+    }
+
+    80% {
+        background-color: rgb(221, 0, 255);
+    }
+
+    90% {
+        background-color: rgb(255, 0, 166);
+    }
+
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+
+}
+
+
+@keyframes dancingcat {
+    0% {
+        transform: scale(1);
+        background-color: #19ea43;
+    }
+
+    30% {
+        transform: scale(1.5);
+        background-color: #372cff;
+    }
+
+    80% {
+        transform: scale(1);
+        background-color: #ff2c2c;
+    }
+
+}
+
+@keyframes movingcat {
+    0% {
+        transform: translateX(120px);
+    }
+
+    100% {
+        transform: translateX(-120px);
+    }
+}
+
+@keyframes draaienmaar2 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(356deg);
+    }
 }

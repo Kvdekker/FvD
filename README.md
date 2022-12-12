@@ -214,7 +214,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Koen    | Soraya 2          | 
+  | Koen    | Soraya           | 
   | ---            | ---                | 
   | Vraag over Fontsizes | Vraag over responsive            | 
   | Vraag of er nog meer dingen bij moeten voor en voldoende | Vraag over grid | 
@@ -225,7 +225,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - Fontsizes zijn prima! Ik moet ze wel allemaal gelijk maken.
-  - 
+  - Kijk nog even naar het beoordelingsformulier
 
 </details>
 

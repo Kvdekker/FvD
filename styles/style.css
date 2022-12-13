@@ -25,7 +25,6 @@
 }
 
 body {
-
     color: var(--lettercolor);
     font-family: arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -38,8 +37,8 @@ header {
     width: 100%;
 }
 
-li:hover,
-li:focus-within {
+main li:hover,
+main li:focus-within {
     transition: 0.2s;
     transform: scale(1.02);
 }
@@ -508,7 +507,7 @@ article:nth-of-type(6) {
 
 article:nth-of-type(6) img {
     align-self: center;
-    width: 400px;
+    width: 290px;
     margin-bottom: 15px;
 }
 
@@ -519,6 +518,7 @@ article:nth-of-type(6) img {
 article:nth-of-type(7) {
     margin: 0 0;
     padding: 0 15px 15px 15px;
+
 }
 
 /*** Selectiemenuknoppen ***/
@@ -785,7 +785,7 @@ footer ul:nth-of-type(2) {
     filter: invert(1);
 }
 
-#MGS article:nth-of-type(3) button:focus  {
+#MGS article:nth-of-type(3) button:focus {
     animation: likedis 1s;
 }
 
@@ -797,7 +797,7 @@ footer ul:nth-of-type(2) {
     }
 
     10% {
-        transform:rotate(20deg) scale(0.5);
+        transform: rotate(20deg) scale(0.5);
         animation-timing-function: ease-in;
     }
 
@@ -805,6 +805,7 @@ footer ul:nth-of-type(2) {
         transform: rotate(0deg) scale(2);
         animation-timing-function: ease-in;
     }
+
     100% {
         transform: scale(1);
         animation-timing-function: ease-out;
@@ -1040,7 +1041,7 @@ footer ul:nth-of-type(2) {
         padding: 0 5em;
     }
 
-    
+
     #MGS article:nth-of-type(6) {
         padding: 0 0;
     }
@@ -1111,6 +1112,16 @@ footer ul:nth-of-type(2) {
         margin: 0 -5em;
     }
 
+    /* MGS Tekst */
+    #MGS article:nth-of-type(2) p {
+        justify-content: flex-start;
+    }
+
+    #MGS article:nth-of-type(2) p span {
+        padding-left: 15px;
+    }
+
+
     /* MGS afbeeldingen */
 
     #MGS article:nth-of-type(5) section:nth-of-type(2) p:nth-of-type(2) {
@@ -1119,6 +1130,7 @@ footer ul:nth-of-type(2) {
         padding: 5px 0 5px 15px;
     }
 
+    /* Afbeeldingen */
     #MGS article:nth-of-type(4) {
         width: auto;
         margin: 0;
@@ -1131,11 +1143,13 @@ footer ul:nth-of-type(2) {
         height: fit-content;
     }
 
+    /* Prijs */
     #MGS article:nth-of-type(5),
     #MGS article:nth-of-type(5) h2 {
         margin: 0;
     }
 
+    /* Footer */
     footer {
         padding: 1em 90px;
     }
@@ -1152,6 +1166,7 @@ footer ul:nth-of-type(2) {
     animation-name: movingcat;
     animation-duration: 0.48s;
     animation-iteration-count: infinite;
+    transition: 1s;
 }
 
 .regenboog {
@@ -1237,6 +1252,7 @@ footer ul:nth-of-type(2) {
     100% {
         transform: translateX(-120px);
     }
+
 }
 
 @keyframes draaienmaar2 {

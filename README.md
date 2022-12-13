@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  Surface Plane
+  Surface Plane (en stiekem een beetje responsive)
  
 </details>
 
@@ -239,19 +239,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/mainpage1.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/mainpage2.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/mainpage3.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/mainpage4.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  
+  Ik ben veel beter geworden met gebruiken van de grid en flexbox in samenwerking met de media queries. Ik wou graag dat mijn website ook responsive was dus ik heb dat toegevoegd.
+  <img src="readme-images/tablet.jpg" width="375px" alt="top">
+  
+  Ik ben na de lessen van Vasilis erachter gekomen hoe deze vette actie mogelijk is bij coderen, Dark light mode! Door middel van het aanpassen van de :root kleuren is het erg gemakkelijk om dit te maken!
+  <img src="readme-images/darklightmode.jpg" width="375px" alt="top">
+  
+  Om dit menu te maken had ik javascript nodig. Dit was erg lastig omdat ik niet wou dat de ontzichtbare onderdelen verteld kon worden door de screenreader. Uiteindelijk (na 3 uur) is het mij gelukt om dit te doen. Ik was een klein onderdeel vergeten toe te voegen...
+  <img src="readme-images/mainpagemenu.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  
+  Ik wou graag een funtie toevoegen dat wanneer je op "toevoegen aan winkelwagen" drukt er een eentje kwam te staan bij de winkelwagen. Door middel van te weinig tijd heb ik dit niet gecodeerd. Het is te doen door middel van een javascript addeventlistener toe te voegen met een clas die het eentje zichtbaar maakt.
+  <img src="readme-images/winkelwagen.jpg" width="375px" alt="bummer">
 </details>
 
 
